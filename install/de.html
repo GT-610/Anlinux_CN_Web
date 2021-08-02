@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../Content/metro-all.css" />
+    <script src="../Scripts/metro.js"></script>
+    <script src="code.js"></script>
+    <title>桌面环境 - AnLinux CN</title>
+</head>
+<body class="bg-dark">
+    <div class="container-fluid bg-dark">
+        <!--Top app bar-->
+        <div data-role="appbar" data-expand-point="md">
+            <!--Brand-->
+            <a href="../index.html" class="brand no-hover">
+                <b>Anlinux CN</b>
+            </a>
+            <!--App Bar Menu-->
+            <a href="../index.html" class="app-bar-item"><span class="mif-home"></span> 主页</a>
+            <div class="app-bar-container">
+                <a class="dropdown-toggle"><span class="mif-install"></span> 安装</a>
+                <ul class="d-menu" data-role="dropdown">
+                    <li><a href="os.html"><span class="mif-linux"></span> Linux</a></li>
+                    <li><a href="de.html"><span class="mif-display"></span> 桌面环境</a></li>
+                    <li><a href="ssh.html"><span class="mif-settings-ethernet"></span> SSH</a></li>
+                    <li><a href="wm.html"><span class="mif-table"></span> 窗口管理器</a></li>
+                    <li><a href="patch.html"><span class="mif-wrench"></span> 补丁</a></li>
+                    <li><a href="root.html"><span class="mif-warning fg-red"> 以root权限运行</span></a></li>
+                </ul>
+            </div>
+            <a href="../uninstall/uninstall.html" class="app-bar-item"><span class="mif-uninstall"></span> 卸载系统</a>
+            <div class="app-bar-container">
+                <a class="dropdown-toggle"><span class="mif-info"> 关于</span></a>
+                <ul class="d-menu" data-role="dropdown">
+                    <li><a href="/others/about.html"><span class="mif-info"></span> 关于本项目</a></li>
+                    <li><a href=""><span class="mif-github"> GitHub</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <br /><br />
+        <div class="remark warning">AnLinux 未提供显示管理器（DM），若安装多个桌面环境，<b>可能会出现一些问题。</b></div>
+        <div class="fg-light">在选择桌面环境之前，需要先选择目标系统，以决定安装方式：</div>
+        <br />
+        <button class="button dark" id="apt" onclick="getdec(id)">Debian, Ubuntu, Kali 或 BackBox</button>
+        <button class="button primary" id="yum" onclick="getdec(id)">Fedora</button>
+        <button class="button info" id="pacman" onclick="getdec(id)">Arch Linux</button>
+        <br /><br />
+        <div id="disp-toggle"class="no-visible">
+            <div class="fg-light">选择桌面环境：</div><br />
+            <button class="button info" id="Xfce4" onclick="getde(id)">Xfce（推荐）</button>
+            <button class="button alert" id="LXQt" onclick="getde(id)">LXQt</button>
+            <button class="button secondary" id="LXDE" onclick="getde(id)">LXDE</button>
+            <button class="button success" id="Mate" onclick="getde(id)">Mate</button>
+        </div><br />
+        <div class="fg-light">复制下方的代码，并粘贴到 <a class="fg-lightRed">Linux</a> 中。</div>
+        <div class="remark alert">必须先<b>启动 Linux</b>，然后在 Linux 终端中执行这些命令。在 Termux 中执行无效。</div>
+        <br />
+        <div class="container-fluid fg-light" id="codedisp">代码将显示在这里……</div>
+
+    </div>
+</body>
+</html>
