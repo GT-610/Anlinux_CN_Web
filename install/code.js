@@ -1,7 +1,7 @@
 ﻿var dec;
 function getos(id) {
     var os = id;
-    document.getElementById("codedisp").innerHTML = "pkg install wget openssl-tool proot -y && hash -r && wget https://raw.fastgit.org/GT-610/AnLinux_CN/CN_mirror/Scripts/Installer/" + os + "/" + os.toLowerCase() + ".sh && bash " + os.toLowerCase() + ".sh";
+    document.getElementById("codedisp").innerHTML = "pkg install wget openssl-tool proot -y && hash -r && wget https://cdn.jsdelivr.net/gh/GT-610/AnLinux_CN@CN_mirror/Scripts/Installer/" + os + "/" + os.toLowerCase() + ".sh && bash " + os.toLowerCase() + ".sh";
 }
 function getdec(id) {
     dec = id;
